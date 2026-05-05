@@ -1,0 +1,309 @@
+/* 🌈 Global Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+/* 🧊 Main Container */
+.app {
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+/* 📦 Layout */
+.layout {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+/* 📅 Calendar Card */
+.calendar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+/* 📝 Task Card */
+.task-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.task-container h2 {
+  margin-bottom: 15px;
+}
+
+/* ✍️ Input Box */
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.input-box button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #00c6ff;
+}
+
+/* 📌 Task Item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.task-item:hover {
+  transform: scale(1.02);
+}
+
+/* 🔘 Buttons */
+.btns button {
+  margin-left: 5px;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btns button:hover {
+  transform: scale(1.1);
+}
+
+.btns button:nth-child(1) {
+  background: #ffc107;
+}
+
+.btns button:nth-child(2) {
+  background: #28a745;
+  color: white;
+}
+
+.btns button:nth-child(3) {
+  background: #dc3545;
+  color: white;
+}
+
+/* 📅 Improve Calendar Look */
+.react-calendar {
+  border: none !important;
+  border-radius: 10px;
+}
+
+.react-calendar__tile--active {
+  background: #4facfe !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+  background: #ffcc00 !important;
+  border-radius: 8px;
+}
+
+/* 🌙 DARK MODE (Improved - Premium Look) */
+.app.dark {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+/* Cards in dark mode */
+.app.dark .calendar,
+.app.dark .task-container {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(16px);
+  color: #e2e8f0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Inputs */
+.app.dark input,
+.app.dark select {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+/* Buttons (general) */
+.app.dark button {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+}
+
+/* 🌙 Toggle Button (Special Styling) */
+.toggle {
+  margin: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: black;
+  transition: 0.3s;
+}
+
+.app.dark .toggle {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+}
+
+.toggle:hover {
+  transform: scale(1.05);
+}
+
+/* 📅 Calendar tweaks in dark */
+.app.dark .react-calendar {
+  background: transparent;
+  color: #e2e8f0;
+}
+
+.app.dark .react-calendar__tile {
+  color: #e2e8f0;
+}
+
+.app.dark .react-calendar__tile--active {
+  background: #3b82f6 !important;
+}
+
+.app.dark .react-calendar__tile--now {
+  background: #facc15 !important;
+  color: black;
+}
+
+
+/* 🎯 PRIORITY SCALE (Modern Tag Style) */
+
+/* LOW */
+.task-item.low {
+  border-left: 5px solid #64748b;
+  background: rgba(100, 116, 139, 0.15);
+}
+
+/* MEDIUM */
+.task-item.medium {
+  border-left: 5px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+/* HIGH */
+.task-item.high {
+  border-left: 5px solid #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+/* 📱 MOBILE RESPONSIVENESS (FULL FIX) */
+@media (max-width: 768px) {
+
+  /* Layout becomes vertical */
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  /* Calendar full width */
+  .calendar {
+    width: 92%;
+    padding: 15px;
+  }
+
+  /* Task container full width */
+  .task-container {
+    width: 92%;
+    padding: 20px;
+  }
+
+  /* Heading smaller */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Input section stacked */
+  .input-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Inputs full width + better size */
+  .input-box input,
+  .input-box select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Button full width */
+  .input-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
+  /* Task spacing improved */
+  .task-item {
+    width: 100%;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Buttons aligned properly */
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Task title spacing */
+  .task-item span {
+    word-break: break-word;
+  }
+
+  /* Task heading spacing */
+  .task-container h2 {
+    margin-bottom: 20px;
+  }
+}
